@@ -3,7 +3,7 @@ import axios from 'axios';
 import {  CREATE_ADOPTION ,GET_ALL_ADOPTIONS_USER,REQUEST_USER,GET_ALL_ADOPTIONS,GET_ADOPTION_BY_ID,UPDATE_ADOPTION,POST_REQUEST,ALL_REQUEST,UPDATE_REQUEST} from '../constants/productConstants.js';
 
 export const getAllAdoptionsUser = (id) => async (dispatch)=>{
-    const response = await axios.get(`http://localhost:3001/adoptions/createAdoption/${id}`);
+    const response = await axios.get(`/adoptions/createAdoption/${id}`);
 
     for(var i = 0 ; i<response.data.length;i++){
             if(response.data[i].photo){
